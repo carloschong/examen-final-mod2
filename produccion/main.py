@@ -8,6 +8,7 @@ from unidecode import unidecode
 from nltk.corpus import stopwords
 import pandas as pd
 import pickle
+import nltk
 #Diseño de la pagina
 nltk.download('stopwords')
 
