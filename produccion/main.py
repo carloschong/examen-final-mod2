@@ -47,7 +47,6 @@ def remove_stopwords(txt):
     txt = pd.Series(txt).apply(lambda x: ' '.join([item for item in x.split() if item not in stop_words]))
     return txt
 
-
 # Cargamos el vectorizer y el modelo
 vectorizer = pickle.load(open("vectorizer.pickle", "rb"))
 modelo = pickle.load(open("logistic_model.pickle", "rb"))
