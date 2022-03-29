@@ -8,7 +8,10 @@ from unidecode import unidecode
 from nltk.corpus import stopwords
 import pandas as pd
 import pickle
+import nltk
 #Diseño de la pagina
+nltk.download('stopwords')
+
 
 st.header("Predicción si la duda/queja pertenece al equipo de token o de transferencias")
 st.subheader('''**Intrucciones de uso:** ''')
@@ -45,10 +48,9 @@ def remove_stopwords(txt):
     txt = pd.Series(txt).apply(lambda x: ' '.join([item for item in x.split() if item not in stop_words]))
     return txt
 
-
 # Cargamos el vectorizer y el modelo
-vectorizer = pickle.load(open("/home/carlos-vazquez/Diplomado Ciencia de Datos/mod2/Examen Final/vectorizer.pickle", "rb"))
-modelo = pickle.load(open("/home/carlos-vazquez/Diplomado Ciencia de Datos/mod2/Examen Final/logistic_model.pickle", "rb"))
+vectorizer = pickle.load(open("vectorizer.pickle", "rb"))
+modelo = pickle.load(open("logistic_model.pickle", "rb"))
 
 # Cargamos el stop words
 stop_words = list(set(stopwords.words('spanish')))
