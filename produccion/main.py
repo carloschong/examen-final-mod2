@@ -49,8 +49,8 @@ def remove_stopwords(txt):
 
 
 # Cargamos el vectorizer y el modelo
-vectorizer = pickle.load(open("/home/carlos-vazquez/Diplomado Ciencia de Datos/mod2/Examen Final/vectorizer.pickle", "rb"))
-modelo = pickle.load(open("/home/carlos-vazquez/Diplomado Ciencia de Datos/mod2/Examen Final/logistic_model.pickle", "rb"))
+vectorizer = pickle.load(open("vectorizer.pickle", "rb"))
+modelo = pickle.load(open("logistic_model.pickle", "rb"))
 
 # Cargamos el stop words
 stop_words = list(set(stopwords.words('spanish')))
