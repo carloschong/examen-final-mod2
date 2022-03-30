@@ -9,6 +9,8 @@ from nltk.corpus import stopwords
 import pandas as pd
 import pickle
 import nltk
+from PIL import Image
+
 #Diseño de la pagina
 nltk.download('stopwords')
 
@@ -112,6 +114,7 @@ if result:
             st.write("**Su llamada sera transferida al equipo encargado del token**")
         else:
             st.write("**Su llamada sera transferida al equipo encargado de transferencias**")
+        image = Image.open('gatito_formal.jpg',caption = 'Gerente')
 
 st.write("**Elaborado por Carlos Eduardo Vázquez Chong**")
 st.write("Para entrega de examen final del modulo 2 del diplomado de 'Ciencia de Datos'")
