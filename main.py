@@ -54,8 +54,6 @@ modelo = pickle.load(open("logistic_model.pickle", "rb"))
 
 # Cargamos el stop words
 stop_words = list(set(stopwords.words('spanish')))
-stop_words.append('aplicacion')
-stop_words.append('banco')
 stop_words.append("algo")
 stop_words.append('ambos')
 
@@ -115,6 +113,8 @@ if result:
         else:
             st.write("**Su llamada sera transferida al equipo encargado de transferencias**")
 
+st.write("**Elaborado por Carlos Eduardo Vázquez Chong**")
+st.write("Para entrega de examen final del modulo 2 del diplomado de 'Ciencia de Datos'")
 # Ayudas
 # https://discuss.streamlit.io/t/speech-to-text-on-client-side-using-html5-and-streamlit-bokeh-events/7888/15
 # https://stackoverflow.com/questions/32764991/how-do-i-store-a-tfidfvectorizer-for-future-use-in-scikit-learn
