@@ -1,3 +1,9 @@
+'''
+Código para pase a producción
+'''
+
+
+
 import streamlit as st
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
@@ -9,8 +15,12 @@ from nltk.corpus import stopwords
 import pandas as pd
 import pickle
 import nltk
+import numpy as np
 from PIL import Image
-image = Image.open('gatito_formal.jpg')
+image1 = Image.open('gatito_formal.jpg')
+image2 = Image.open('gato_capa.jpg')
+image3 = Image.open('gato_elegante.jpg')
+image4 = Image.open('gato_lic.jpg')
 #Diseño de la pagina
 nltk.download('stopwords')
 
@@ -114,7 +124,8 @@ if result:
             st.write("**Su llamada sera transferida al equipo encargado del token**")
         else:
             st.write("**Su llamada sera transferida al equipo encargado de transferencias**")
-        st.image(image, caption='Gerente')
+        selecccionar_gerente = np.random.choice([image1,image2,image3,image4])
+        st.image(selecccionar_gerente, caption='Gerente')
 
 st.write("**Elaborado por Carlos Eduardo Vázquez Chong**")
 st.write("Para entrega de examen final del modulo 2 del diplomado de 'Ciencia de Datos'")
