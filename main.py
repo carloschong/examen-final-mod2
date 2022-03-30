@@ -19,7 +19,7 @@ import numpy as np
 from PIL import Image
 image1 = Image.open('gatito_formal.jpg')
 image2 = Image.open('gato_capa.jpg')
-image3 = Image.open('gato_elegante.jpg')
+image3 = Image.open('gato_elegante.jpeg')
 image4 = Image.open('gato_lic.jpg')
 #Diseño de la pagina
 nltk.download('stopwords')
